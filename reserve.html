@@ -22,8 +22,8 @@
 			<br>
 
 			<div class="text-center">
-				<a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
-				<a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+				<a href="tables.html"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
+				<a href="index.html"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
 			</div>
 		</div>
 
@@ -80,9 +80,9 @@
 </body>
 </html>
 
-<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
 
+<<<<<<< HEAD
 	// In this code below we create the Front-end Javascript which "POSTS" our form data to our express server.
 	// In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
 	// Our api recognizes the route (/tables)... and then runs the associated code (found in api-routes.js).
@@ -135,3 +135,19 @@ return false;
 });
 
 </script>
+=======
+$(".submit").on("click", function(event){
+event.preventDefault();
+
+var newReservation = {
+	customerName: $('#reserve_name').val().trim(),
+	phoneNumber: $('#reserve_phone').val().trim(),
+	customerEmail: $('#reserve_email').val().trim(),
+	customerID: $('#reserve_uniqueID').val().trim()
+};
+
+console.log(newReservation);
+});
+
+</script>
+>>>>>>> 4aaf854b8beba9b54254b001d4a6d34715c595f8
